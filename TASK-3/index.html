@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="s-e-f">Student Enrollment Form</div>
+    <div class="main">
+      <div class="form-container">
+        <form
+          class="student-form"
+          id="form"
+          name="myForm"
+          onsubmit="return validateForm()"
+          method="get"
+          action="/"
+        >
+          <div class="form-design" id="full-name">
+            <div class="form-feilds">Name</div>
+            <input
+              type="text"
+              name="fname"
+              id="full-name"
+              placeholder="Enter your full name"
+              required
+            />
+            <div class="error-container" id="error-container"></div>
+          </div>
+          <div class="form-design" id="email">
+            <div class="form-feilds">Email</div>
+            <input
+              type="email"
+              name="femail"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <div class="error-container" id="error-container"></div>
+          </div>
+          <div class="form-design" id="phone">
+            <div class="form-feilds">Phone</div>
+            <input
+              type="phone"
+              name="fphone"
+              id="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+            <div class="error-container" id="error-container"></div>
+          </div>
+          <div class="form-design" id="website">
+            <div class="form-feilds">Website</div>
+            <input
+              type="url"
+              name="fwebsite"
+              id="website"
+              placeholder="Enter your website's url"
+            />
+            <div class="error-container" id="error-container"></div>
+          </div>
+          <div class="form-design" id="image">
+            <div class="form-feilds">Image link</div>
+            <input
+              type="url"
+              name="fimage"
+              id="image"
+              placeholder="Enter link to your image"
+            />
+            <div class="error-container" id="error-container"></div>
+          </div>
+          <div class="form-design" id="gender">
+            <div class="form-feilds">Gender</div>
+            <input type="radio" name="gender" id="male" value="Male" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="Female" />
+            <label for="male">Female</label>
+            <div class="error-container" id="error-container"></div>
+          </div>
+          <div class="form-design" id="skills">
+            <div class="form-feilds">Skills</div>
+            <input type="checkbox" name="skills" id="java" value="Java" />
+            <label for="java">Java</label>
+            <input type="checkbox" name="skills" id="html" value="HTML" />
+            <label for="html">HTML</label>
+            <input type="checkbox" name="skills" id="css" value="CSS" />
+            <label for="css">CSS</label>
+            <div class="error-container" id="error-container"></div>
+          </div>
+          <div class="form-design" id="password">
+            <div class="form-feilds">Password</div>
+            <input
+              type="password"
+              name="fpassword"
+              id="password"
+              placeholder="Enter password"
+              required
+            />
+            <div class="error-container" id="error-container"></div>
+          </div>
+          <div class="form-design" id="con-password">
+            <div class="form-feilds">Confirm Password</div>
+            <input
+              type="password"
+              name="fconpassword"
+              id="con-password"
+              placeholder="Enter password again"
+              required
+            />
+            <div class="error-container" id="error-container"></div>
+          </div>
+          <input
+            class="button enroll-student"
+            type="submit"
+            value="Enroll Student"
+          />
+          <button
+            class="button clear"
+            type="button"
+            onclick="clearFormFields()"
+          >
+            Clear
+          </button>
+        </form>
+      </div>
+      <div class="card-container" id="card-container">
+        <p class="e-s">Enrolled Students</p>
+        <div id="displayData"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
